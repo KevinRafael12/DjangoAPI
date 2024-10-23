@@ -4,7 +4,6 @@
 * Author URI: https://untree.co/
 * License: https://creativecommons.org/licenses/by/3.0/
 */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 body {
   overflow-x: hidden;
   position: relative; }
@@ -709,3 +708,108 @@ textarea {
     height: 50px;
     border-radius: 50%;
     background: rgba(59, 93, 80, 0.2); }
+
+
+/* Estilos específicos para la página de login */
+body.login-page {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+body.login-page .login-container {
+  background-color: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+body.login-page .login-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+body.login-page .login-container input[type="text"],
+body.login-page .login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+body.login-page .login-container button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+body.login-page .login-container button:hover {
+  background-color: #0056b3;
+}
+
+body.login-page .login-container .google-signin {
+  background-color: #dc3545; /* Color rojo */
+  margin-top: 10px; /* Espaciado superior */
+}
+
+body.login-page .login-container .google-signin:hover {
+  background-color: #c82333; /* Color rojo más oscuro al pasar el mouse */
+}
+
+body.login-page .login-container a {
+  display: block;
+  margin-top: 15px;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+body.login-page .login-container a:hover {
+  text-decoration: underline;
+}
+body.login-page .login-container img {
+  width: 100px; /* Ajusta el ancho del logo */
+  height: auto; /* Mantiene la proporción del logo */
+  display: block; /* Centra el logo */
+  margin: 0 auto 20px auto; /* Añade un margen inferior y centra horizontalmente */
+}
+
+body.login-page .login-container p {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+body.login-page .login-container p a {
+  margin-left: 5px; /* Espacio entre el texto y el enlace */
+  text-decoration: none;
+  color: #007BFF;
+}
+
+body.login-page .login-container p a:hover {
+  text-decoration: underline;
+}
+
+
+#error-message {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ff0015; /* Fondo rojo suave */
+  color: #ffffff; /* Color del texto */
+  border: 1px solid #f5c6cb; /* Borde rojo claro */
+  font-size: 16px;
+  text-align: center; /* Centrar el texto */
+  margin-top: 2px;
+}

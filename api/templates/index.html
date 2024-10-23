@@ -12,7 +12,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="author" content="Untree.co">
-  <link rel="shortcut icon" href="favicon.png">
+  <link rel="shortcut icon" href="{% static 'images/favicon.png'%}">
 
   <meta name="description" content="" />
   <meta name="keywords" content="bootstrap, bootstrap4" />
@@ -47,6 +47,9 @@
 						<li><a class="nav-link" href="services.html">Services</a></li>
 						<li><a class="nav-link" href="blog.html">Blog</a></li>
 						<li><a class="nav-link" href="contact.html">Contact us</a></li>
+						<li class="submenu-item">
+							<a><button class="f" id="logout-button">Logout</button></a>
+						  </li>
 					</ul>
 
 					<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
@@ -540,8 +543,10 @@
 
 
 		<script src="{% static 'js/bootstrap.bundle.min.js'%}"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 		<script src="{% static 'js/tiny-slider.js'%}"></script>
 		<script src="{% static 'js/custom.js'%}"></script>
+		<script src="{% static 'js/alerts/alert_logout.js'%}"></script>
 	</body>
 
 </html>
