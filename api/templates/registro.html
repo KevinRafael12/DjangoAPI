@@ -23,36 +23,34 @@
   <title>Registro</title>
 </head>
 <body class="login-page">
-  <div class="login-container">
-    <a href="{% url 'home' %}"><img src="{% static 'images/logo.png' %}" alt="Logo"></a>
+ <div class="login-container">
+    <a href="{% url 'home' %}"><img src="{% static 'images/Logo.png' %}" alt="Logo"></a>
+    
     {% if messages %}
-    {% for message in messages %}
-    {% if message.tags == "error" %}
-    <div id="error-message" class="alert alert-danger">
-      <h4 class="alert-heading">{{ message }}</h4>
-      
-    </div>
-    {% elif message.tags == "success" %}
-    <div id="success-message" class="alert alert-success">
-      <h4 class="alert-heading">{{ message }}</h4>
-  
-    </div>
+        {% for message in messages %}
+            {% if message.tags == "error" %}
+                <div id="error-message" class="alert alert-danger">
+                    <h4 class="alert-heading">{{ message }}</h4>
+                </div>
+            {% elif message.tags == "success" %}
+                <div id="success-message" class="alert alert-success">
+                    <h4 class="alert-heading">{{ message }}</h4>
+                </div>
+            {% endif %}
+        {% endfor %}
     {% endif %}
-    {% endfor %}
-    {% endif %}
-
 
     <h2>Registrarse</h2>
-    <form  method="POST">
-      {% csrf_token %}
-      <input type="email" name="email" placeholder="Correo electrónico" required>
-      <input type="text" name="username" placeholder="Nombre de usuario" required>
-      <input type="password" name="password" placeholder="Contraseña" required>
-      <input type="password" name="password_confirmation" placeholder="Confirmar contraseña" required>
-      <button type="submit">Registrarse</button>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="email" name="email" placeholder="Correo electrónico" class="form-input" required>
+        <input type="text" name="username" placeholder="Nombre de usuario" class="form-input" required>
+        <input type="password" name="password" placeholder="Contraseña" class="form-input" required>
+        <input type="password" name="password_confirmation" placeholder="Confirmar contraseña" class="form-input" required>
+        <button type="submit">Registrarse</button>
     </form>
     <a href="{% url 'login' %}">Inicia sesión aquí</a>
-  </div>
+</div>
 
 </body>
 </html>

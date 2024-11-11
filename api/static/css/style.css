@@ -712,8 +712,12 @@ textarea {
 
 /* Estilos específicos para la página de login */
 body.login-page {
+  background-image: url("../images/fondo_login.jpg");
   font-family: Arial, sans-serif;
-  background-color: #f7f7f7;
+   background-size: cover; /* La imagen cubre toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat;
+  /*background-image: linear-gradient(to bottom, #8311c1, #4b006e); /* Degradado de morado claro a morado oscuro */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -722,13 +726,17 @@ body.login-page {
 }
 
 body.login-page .login-container {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding: 40px;
   border-radius: 8px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    8px 0 30px rgba(0, 0, 0, 1.9),  /* Sombra muy fuerte en el lado derecho */
+    -8px 0 30px rgba(0, 0, 0, 1.9), /* Sombra muy fuerte en el lado izquierdo */
+    0 8px 30px rgba(0, 0, 0, 1.9);  /* Sombra muy fuerte en la parte inferior */
   width: 300px;
   text-align: center;
 }
+
 
 body.login-page .login-container h2 {
   margin-bottom: 20px;
@@ -736,19 +744,22 @@ body.login-page .login-container h2 {
 }
 
 body.login-page .login-container input[type="text"],
-body.login-page .login-container input[type="password"] {
+body.login-page .login-container input[type="password"],
+body.login-page .login-container input[type="email"] {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
-  border-radius: 5px;
+  border: 3px solid #8311c1;
+  border-radius: 20px;
   font-size: 16px;
 }
+
 
 body.login-page .login-container button {
   width: 100%;
   padding: 10px;
-  background-color: #007BFF;
+  background-color: #066c6a;
   color: white;
   border: none;
   border-radius: 5px;
